@@ -9,13 +9,13 @@ class TodoItem extends React.Component {
         this.props.changeTodoState(this.props.index, isDone);
     }
     handlerDelete() {
-        this.props.deleteTodo(this.props.index)
+        this.props.deleteTodo(this.props.index);
     }
     handlerMouseIn () {
-        ReactDOM.findDOMNode(this.refs.delButton).style.display = 'inline-block'
+        ReactDOM.findDOMNode(this.refs.delButton).style.display = 'inline-block';
     }
     handlerMouseOut () {
-        ReactDOM.findDOMNode(this.refs.delButton).style.display = 'none'
+        ReactDOM.findDOMNode(this.refs.delButton).style.display = 'none';
     }
 
     render() {
