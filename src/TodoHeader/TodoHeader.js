@@ -23,7 +23,7 @@ class TodoHeader extends React.Component {
                 <div className="todo-title">
                     <h1>todos</h1>
                 </div>
-                <input onKeyUp={this.handlerKeyUp.bind(this)} type="text" placeholder="what need to do?"/>
+                <input onKeyUp={this.handlerKeyUp.bind(this)} type="text" placeholder="What needs to do?"/>
             </div>
         )
     }
