@@ -14,6 +14,9 @@ class TodoFooter extends React.Component{
     showActive(){
         this.props.show('Active');
     }
+    showCompleted() {
+        this.props.show('Completed');
+    }
 
     render(){
         return (
@@ -21,6 +24,7 @@ class TodoFooter extends React.Component{
             <span className="item-left">{this.props.todoLeftCount} item left</span>
             <Button onClick={this.showAll.bind(this)}>All</Button>
             <Button onClick={this.showActive.bind(this)}>Active</Button>
+            <Button onClick={this.showCompleted.bind(this)}>Completed</Button>
             <Button onClick={this.deleteAll.bind(this)}>Clear completed</Button>
         </div>
         )

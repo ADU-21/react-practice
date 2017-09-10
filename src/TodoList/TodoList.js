@@ -8,8 +8,10 @@ class TodoList extends React.Component {
 
         if(this.props.show === 'All') {
             todoListToshow = this.props.todos;
-        }else if(this.props.show === 'Active'){
+        }else if(this.props.show === 'Active') {
             todoListToshow = this.props.todos.filter(todo => !todo.isDone);
+        }else if(this.props.show === 'Completed') {
+            todoListToshow = this.props.todos.filter(todo => todo.isDone);
         }
         return (
             <ul className="todo-list">
