@@ -1,13 +1,26 @@
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+li:hover {
+    color: red;
+}
+
+.ant-checkbox-wrapper {
+    display: inline-block;
+}
 .task {
     display: inline-block;
-    vertical-align: top;
     width: 80%;
     font-size: 16px;
 } 
 .task-done {
+    display: inline-block;
+    width: 80%;
+    font-size: 16px;
     text-decoration: line-through;
 } 
 .ant-btn {
-    vertical-align: top;
-    display: inline;
-} 
+    display: inline-block;
+}

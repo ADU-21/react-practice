@@ -1,6 +1,6 @@
-import React from 'react'
-import { Button, Checkbox } from 'antd'
-import './TodoFooter.css'
+import React from 'react';
+import { Button, Checkbox } from 'antd';
+import './TodoFooter.css';
 
 class TodoFooter extends React.Component{
   deleteAll(){
@@ -13,16 +13,11 @@ class TodoFooter extends React.Component{
     let minus = this.props.todoCount - this.props.todoDoneCount
     return (
       <div className="todo-footer">
-        <label>
-          <Checkbox checked={this.props.isAllChecked} onChange={this.changeAll.bind(this)}/>全选
-        </label>
-        <span className="item-left">还剩{minus}未完成</span>
-        <span>
-        <Button type="danger" onClick={this.deleteAll.bind(this)}>清除全部已完成</Button>
-        </span>
+        <span className="item-left">{minus} item left</span>
+        <Button type="danger" onClick={this.deleteAll.bind(this)}>Clear completed</Button>
       </div>
     )
   }
 }
 
-export default TodoFooter
+export default TodoFooter;
