@@ -8,7 +8,11 @@ class TodoFooter extends React.Component{
     }
 
     showAll(){
-        this.props.showAll();
+        this.props.show('All');
+    }
+
+    showActive(){
+        this.props.show('Active');
     }
 
     render(){
@@ -16,6 +20,7 @@ class TodoFooter extends React.Component{
         <div className="todo-footer">
             <span className="item-left">{this.props.todoLeftCount} item left</span>
             <Button onClick={this.showAll.bind(this)}>All</Button>
+            <Button onClick={this.showActive.bind(this)}>Active</Button>
             <Button onClick={this.deleteAll.bind(this)}>Clear completed</Button>
         </div>
         )

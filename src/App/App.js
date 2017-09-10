@@ -34,8 +34,8 @@ class App extends React.Component {
         this.setState({todos: todos});
     }
 
-    showAll(){
-        this.setState({show: 'All'});
+    show(showWhat){
+        this.setState({show: showWhat});
     }
 
     render() {
@@ -48,7 +48,7 @@ class App extends React.Component {
                 <TodoHeader addTodo={this.addTodo.bind(this)} />
                 <TodoList todos={this.state.todos} show={this.state.show} 
                     deleteTodo={this.deleteTodo.bind(this)} changeTodoState={this.changeTodoState.bind(this)} />
-                <TodoFooter todoLeftCount={todoLeftCount} clearDone={this.clearDone.bind(this)} showAll={this.showAll.bind(this)} /> 
+                <TodoFooter todoLeftCount={todoLeftCount} clearDone={this.clearDone.bind(this)} show={this.show.bind(this)} /> 
             </div>
         )
     }

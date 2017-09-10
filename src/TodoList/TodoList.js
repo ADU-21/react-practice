@@ -5,11 +5,11 @@ import './TodoList.css';
 class TodoList extends React.Component {
     render() {
         let todoListToshow = [];
-        
+
         if(this.props.show === 'All') {
             todoListToshow = this.props.todos;
-        }else if(this.props.show == ''){
-            let todoListToshow = this.props.todos;
+        }else if(this.props.show === 'Active'){
+            todoListToshow = this.props.todos.filter(todo => !todo.isDone);
         }
         return (
             <ul className="todo-list">

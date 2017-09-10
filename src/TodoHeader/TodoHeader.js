@@ -5,7 +5,7 @@ import './TodoHeader.css'
 
 class TodoHeader extends React.Component {
     handlerKeyUp(e) {
-        if(e.keyCode == 13) {
+        if(e.keyCode === 13) {
             let value = e.target.value;
             if(!value) return false;
             let newTodoItem = {
