@@ -9,7 +9,8 @@ class App extends React.Component {
     constructor() {
         super();
         this.state = { 
-            todos:[]
+            todos:[],
+            show: 'All',
         }
     }
 
@@ -29,8 +30,12 @@ class App extends React.Component {
     }
 
     clearDone() {
-      let todos = this.state.todos.filter(todo => !todo.isDone);
-      this.setState({todos: todos});
+        let todos = this.state.todos.filter(todo => !todo.isDone);
+        this.setState({todos: todos});
+    }
+
+    showAll(){
+        this.setState({show: 'All'});
     }
 
     render() {
@@ -41,8 +46,9 @@ class App extends React.Component {
         return(
             <div className="todo-wrapper">
                 <TodoHeader addTodo={this.addTodo.bind(this)} />
-                <TodoList todos={this.state.todos} deleteTodo={this.deleteTodo.bind(this)} changeTodoState={this.changeTodoState.bind(this)} />
-                <TodoFooter todoLeftCount={todoLeftCount} clearDone={this.clearDone.bind(this)} /> 
+                <TodoList todos={this.state.todos} show={this.state.show} 
+                    deleteTodo={this.deleteTodo.bind(this)} changeTodoState={this.changeTodoState.bind(this)} />
+                <TodoFooter todoLeftCount={todoLeftCount} clearDone={this.clearDone.bind(this)} showAll={this.showAll.bind(this)} /> 
             </div>
         )
     }
