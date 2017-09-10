@@ -1,0 +1,13 @@
+.task {
+    display: inline-block;
+    vertical-align: top;
+    width: 80%;
+    font-size: 16px;
+} 
+.task-done {
+    text-decoration: line-through;
+} 
+.ant-btn {
+    vertical-align: top;
+    display: inline;
+} 
